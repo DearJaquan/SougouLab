@@ -1,4 +1,5 @@
-# SougouLab====<br>2018-11-11  在SougouCS数据上做一些自然语言处理的实验，为课题实验做准备---<br>
+# SougouLab<br>
+2018-11-11  在SougouCS数据上做一些自然语言处理的实验，为课题实验做准备<br>
 * Git教程  <br>
 https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000<br>
 * Git官方指南中文翻译版  <br>
