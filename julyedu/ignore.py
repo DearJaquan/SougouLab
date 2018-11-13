@@ -1,23 +1,4 @@
-'''
-七月在线  julyEdu.com
-note：基于python2.X
-'''
-import os
-import jieba
-import sklearn
-
-# 词统计,【去重】
-def make_word_set(words_file):
-    print("生成样本集....")
-    words_set = set()   #set()函数创建一个无序不重复元素集，可进行关系测试，删除重复数据，计算交、差、并集等
-    with open(words_file, 'r', encoding = 'utf-8') as fp: # open()函数‘Open file and return a stream’
-        for line in fp.readlines():
-            word = line.strip()
-            if len(word) > 0 and word not in words_set:    #去重
-                words_set.add(word)
-    print("样本集生成完毕")
-    return words_set
-
+# 该文件和jupyter notebook配合使用，调试代码块
 
 # 文本处理，样本生成的过程
 def text_processing(folder_path, test_size=0.2):
@@ -44,7 +25,7 @@ def text_processing(folder_path, test_size=0.2):
                 # j += 1
 
     train_data_list, test_data_list, train_class_list, test_class_list = sklearn.cross_validation.train_test_split(
-            data_list, class_list, data_list = class_list)  #sklearn划分训练集，测试集
+        data_list, class_list, data_list = class_list)  #sklearn划分训练集，测试集
 
     # 统计词频 【字典】
     all_words_dict = {}
@@ -60,15 +41,3 @@ def text_processing(folder_path, test_size=0.2):
     all_words_list = list(zip(*all_words_tuple_list)[0])
     return all_words_list, train_data_list, test_data_list,train_class_list, test_class_list
 
-def words_dict(all_words_list, deleteN, stopwords_set=set()):
-    # 选取特征词
-    feature_words = []
-    n = 1
-    for t in range(deleteN, len(all_words_list), 1):
-        if n> 1000: # feature_words的维度1000
-            break
-
-        if not all_words_list(t).isdigit() and all_words_list[t] not in stopwords_set and 1 < len(all_words_list[t]) < 5:
-            feature_words.append(all_words_list[t])
-            n += 1
-    return feature_words

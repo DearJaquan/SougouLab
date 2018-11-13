@@ -1,6 +1,7 @@
 
 import os
 import jieba
+from gensim.corpora import dictionary
 
 '''从samples文件夹中读取所有样本文件'''
 def listdir(path, list_name):
