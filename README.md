@@ -18,3 +18,5 @@ https://www.cnblogs.com/qianqiannian/p/6008140.html<br>
 https://www.cnblogs.com/xiaodi-js/p/6864326.html<br>
 * git pull命令<br>
 https://www.cnblogs.com/xiaodi-js/p/6864326.html<br>
+* Git忽略文件.gitignore的使用<br>
+https://www.jianshu.com/p/a09a9b40ad20<br>
