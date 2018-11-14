@@ -7,7 +7,7 @@ import time
 import jieba.posseg as pseg
 
 sys.path.append("../")
-jieba.load_userdict("../Database/userdict.txt") # 加载自定义分词词典
+jieba.load_userdict("../samples/dicts/smalldict.txt") # 加载自定义分词词典
 
 '''
 title：利用结巴分词进行文本语料处理：单文本处理器、批量文件处理器
