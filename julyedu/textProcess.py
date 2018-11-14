@@ -1,10 +1,14 @@
+# -*- coding:utf-8 -*-
 '''
 七月在线  julyEdu.com
-note：基于python2.X
+note：视频代码采用python2.X
 '''
 import os
+import sys
 import jieba
 import sklearn
+
+stopwords_folder_path = '../samples/stopwords/'
 
 # 词统计,【去重】
 def make_word_set(words_file):
